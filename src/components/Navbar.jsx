@@ -3,7 +3,7 @@ import { NavLink as Link } from "react-router-dom";
 export const activeLinkStyles = ({ isActive }) =>
   isActive ? "underline underline-offset-4" : "hover:text-sky-500";
 
-  const Navbar = () => {
+const Navbar = () => {
   return (
     <nav className="h-20 w-full shadow-md flex items-center px-8 gap-4 text-lg font-semibold ">
       <Link to="/" className={activeLinkStyles}>
@@ -14,6 +14,9 @@ export const activeLinkStyles = ({ isActive }) =>
       </Link>
       <Link to="/products" className={activeLinkStyles}>
         Products
+      </Link>
+      <Link to="/users" className={activeLinkStyles}>
+        Users
       </Link>
     </nav>
   );
