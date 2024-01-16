@@ -13,6 +13,7 @@ import UserDetails from "./components/UserDetails";
 import Profile from "./components/Profile";
 import { AuthProvider } from "./components/auth";
 import Login from "./components/Login";
+import RequireAuth from "./components/RequireAuth";
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
         <Route path="/users/" element={<Users />}>
           <Route path=":userId" element={<UserDetails />} />
         </Route>
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Nomatch />} />
       </Routes>
